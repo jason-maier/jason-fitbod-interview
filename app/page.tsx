@@ -8,7 +8,7 @@ export type Exercise = {
   image: string;
 };
 
-const getExerciseData = async (): Promise<Exercise[]> => {
+export const getExerciseData = async (): Promise<Exercise[]> => {
   const res = await fetch(
     "https://storage.googleapis.com/fitbod-web-internal/exercises.json"
   );
