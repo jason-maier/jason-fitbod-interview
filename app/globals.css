@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --fitbod-blue: #0085bf;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,6 +25,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.fitbod-header {
+  background-color: var(--fitbod-blue);
+  height: 60px;
+  padding-left: 24px;
+  padding-top: 16px;
+  width: 100%;
 }
 
 @layer utilities {
