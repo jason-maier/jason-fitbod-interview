@@ -32,6 +32,7 @@ export default function RootLayout({
           </Link>
         </header>
         {children}
+        <footer className="fitbod-footer" />
       </body>
     </html>
   );

@@ -35,6 +35,14 @@ body {
   width: 100%;
 }
 
+.fitbod-footer {
+  background-color: var(--fitbod-blue);
+  bottom: 0;
+  height: 150px;
+  position: fixed;
+  width: 100%;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
