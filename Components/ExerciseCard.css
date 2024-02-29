@@ -4,6 +4,15 @@
   width: 329px;
 }
 
+.ExerciseCard-image {
+  height: 60px;
+  object-fit: cover;
+}
+
+.ExerciseCard-main-content {
+  margin-right: auto;
+}
+
 @media screen and (max-width: 800px) {
   .ExerciseCard-container {
     margin-left: auto;
@@ -12,16 +21,11 @@
 }
 
 @media screen and (min-width: 800px) {
+  .ExerciseCard-section {
+    width: 722px;
+  }
+
   .ExerciseCard-container:nth-child(odd) {
     margin-right: 64px;
   }
-}
-
-.ExerciseCard-image {
-  height: 60px;
-  object-fit: cover;
-}
-
-.ExerciseCard-main-content {
-  margin-right: auto;
 }

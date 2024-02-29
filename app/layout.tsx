@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="fitbod-header">
+        <header className="Application-header">
           <Link href="/">
             <Image
               src="/fitbodLogo.svg"
@@ -32,7 +32,7 @@ export default function RootLayout({
           </Link>
         </header>
         {children}
-        <footer className="fitbod-footer" />
+        <footer className="Application-footer" />
       </body>
     </html>
   );

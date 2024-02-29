@@ -1,13 +1,8 @@
 import { getExerciseData } from "@/app/page";
 import Image from "next/image";
-import "./Exercise.css";
 import ExerciseForm from "@/Components/ExerciseForm";
-import { ExerciseData } from "@/app/page";
-
-type Set = {
-  reps: number;
-  weight: number;
-};
+import { ExerciseData } from "@/app/types/types";
+import "./Exercise.css";
 
 const Exercise = async ({ params }: { params: { slug: string } }) => {
   const exercises: ExerciseData[] = await getExerciseData();
@@ -26,7 +21,7 @@ const Exercise = async ({ params }: { params: { slug: string } }) => {
           alt={exercise.name}
           width={150}
           height={150}
-          className="exercise-image mb-8"
+          className="Exercise-image mb-8"
         />
       </div>
       <ExerciseForm exerciseSlug={exercise.name} />

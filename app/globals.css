@@ -3,22 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
   --fitbod-blue: #0085bf;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(#c4f7e8, #a5ccf9);
   font-size: 14px;
 }
@@ -29,7 +17,7 @@ body {
   }
 }
 
-.fitbod-header {
+.Application-header {
   background-color: var(--fitbod-blue);
   height: 60px;
   padding-left: 24px;
@@ -37,16 +25,10 @@ body {
   width: 100%;
 }
 
-.fitbod-footer {
+.Application-footer {
   background-color: var(--fitbod-blue);
   bottom: 0;
   height: 150px;
   position: fixed;
   width: 100%;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }

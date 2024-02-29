@@ -1,12 +1,6 @@
 import ExerciseCard from "@/Components/ExerciseCard";
+import { ExerciseData } from "./types/types";
 import "./globals.css";
-
-export type ExerciseData = {
-  id: string;
-  name: string;
-  muscle: string;
-  image: string;
-};
 
 export const getExerciseData = async (): Promise<ExerciseData[]> => {
   const res = await fetch(
