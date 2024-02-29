@@ -15,9 +15,9 @@ interface ExerciseFormProps {
 
 const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
   const setsFromLocalStorage = localStorage.getItem(exerciseSlug);
-  // A design consideration here is to set the default to 0 - I chose not to since this was not in the design
-  const [reps, setReps] = useState<number>();
-  const [weight, setWeight] = useState<number>();
+  // Purposeful design deviation here to improve accessibility and maintain a controlled component
+  const [reps, setReps] = useState<number>(0);
+  const [weight, setWeight] = useState<number>(0);
   const [sets, setSets] = useState(
     setsFromLocalStorage ? JSON.parse(setsFromLocalStorage) : []
   );
@@ -66,8 +66,6 @@ const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
     }
     return acc;
   }, {});
-
-  console.log(setsGroupedByDate, "<<<<<");
 
   return (
     <div className="ExerciseForm-container">
@@ -131,17 +129,6 @@ const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
               )}
             </div>
           )}
-          {/* {sets.map((set: Set, index: number) => (
-            <div className="ExerciseForm-set-information mb-6" key={index}>
-              <span>
-                {set.reps} x {set.weight} lb{" "}
-              </span>
-              <span>
-                <span className="font-bold">Estimated 1RM: </span>
-                {calculateBrzycki(set.weight, set.reps)} lb
-              </span>
-            </div>
-          ))} */}
         </div>
       )}
     </div>
