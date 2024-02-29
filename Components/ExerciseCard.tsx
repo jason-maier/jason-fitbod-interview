@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Exercise } from "@/app/page";
+import { ExerciseData } from "@/app/page";
 import "./ExerciseCard.css";
 
 interface ExerciseCardProps {
-  exercise: Exercise;
+  exercise: ExerciseData;
 }
 
 const ExerciseCard = ({ exercise }: ExerciseCardProps) => {

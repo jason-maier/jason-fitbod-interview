@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 type Set = {
   reps: number;
   weight: number;
@@ -7,11 +9,14 @@ type Set = {
 
 interface ExerciseFormProps {
   exerciseSlug: string;
-  sets: Set[];
-  setSets: (sets: Set[]) => void;
 }
 
-const ExerciseForm = ({ exerciseSlug, sets, setSets }: ExerciseFormProps) => {
+const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
+  const setsFromLocalStorage = localStorage.getItem(exerciseSlug);
+  const [sets, setSets] = useState(
+    setsFromLocalStorage ? JSON.parse(setsFromLocalStorage) : []
+  );
+
   const onClick = () => {
     const reps = (document.getElementById("reps") as HTMLInputElement).value;
     const weight = (document.getElementById("weight") as HTMLInputElement)

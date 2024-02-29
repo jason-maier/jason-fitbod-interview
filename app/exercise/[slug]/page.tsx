@@ -1,31 +1,21 @@
-"use client";
-
 import { getExerciseData } from "@/app/page";
 import Image from "next/image";
 import "./Exercise.css";
 import ExerciseForm from "@/Components/ExerciseForm";
-import { useState } from "react";
+import { ExerciseData } from "@/app/page";
 
 type Set = {
   reps: number;
   weight: number;
 };
 
-const Exercise = ({ params }: { params: { slug: string } }) => {
-  const setsFromLocalStorage = localStorage.getItem(params.slug);
-  const [sets, setSets] = useState(
-    setsFromLocalStorage ? JSON.parse(setsFromLocalStorage) : []
-  );
-
-  // GET EXERCISE DATA FROM ELSEWHERE NOW THAT THIS IS A DYNAMIC ROUTE
-
+const Exercise = async ({ params }: { params: { slug: string } }) => {
+  const exercises: ExerciseData[] = await getExerciseData();
   const exercise = exercises.find((exercise) => exercise.id === params.slug);
 
   if (!exercise) {
     return <p>Exercise not found</p>;
   }
-
-  console.log(sets, "<<<< SETS");
 
   return (
     <main className="min-h-screen">
@@ -40,12 +30,7 @@ const Exercise = ({ params }: { params: { slug: string } }) => {
         />
       </div>
       <div>
-        <ExerciseForm
-          handleClick={handleClick}
-          sets={sets}
-          setSets={setSets}
-          exerciseSlug={exercise.name}
-        />
+        <ExerciseForm exerciseSlug={exercise.name} />
         <p className="font-bold mb-8 mt-8">Performances:</p>
       </div>
     </main>
