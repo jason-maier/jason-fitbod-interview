@@ -26,13 +26,10 @@ const Exercise = async ({ params }: { params: { slug: string } }) => {
           alt={exercise.name}
           width={150}
           height={150}
-          className="exercise-image"
+          className="exercise-image mb-8"
         />
       </div>
-      <div>
-        <ExerciseForm exerciseSlug={exercise.name} />
-        <p className="font-bold mb-8 mt-8">Performances:</p>
-      </div>
+      <ExerciseForm exerciseSlug={exercise.name} />
     </main>
   );
 };

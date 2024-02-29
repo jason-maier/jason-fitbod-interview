@@ -1,0 +1,45 @@
+.ExerciseForm-button {
+  background-color: var(--fitbod-blue);
+  border-radius: 12px;
+  color: white;
+  font-size: 24px;
+  height: 35px;
+  line-height: 35px;
+  width: 42px;
+}
+
+.ExerciseForm-container {
+  margin: 0 auto;
+}
+
+.ExerciseForm-input {
+  border: 1px solid black;
+  border-radius: 12px;
+  height: 35px;
+  padding: 0 10px;
+  width: 72px;
+}
+
+.ExerciseForm-set-information {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+/* Mobile Only Styles */
+@media screen and (max-width: 800px) {
+  .ExerciseForm-container {
+    width: 80%;
+  }
+}
+
+/* Desktop Only Styles */
+@media screen and (min-width: 800px) {
+  .ExerciseForm-container {
+    width: 650px;
+  }
+
+  .ExerciseForm-set-information:nth-child(even) {
+    margin-left: 48px;
+  }
+}

@@ -1,23 +1,5 @@
-.exercise-button {
-  background-color: var(--fitbod-blue);
-  border-radius: 12px;
-  color: white;
-  font-size: 24px;
-  height: 35px;
-  line-height: 35px;
-  width: 42px;
-}
-
 .exercise-image {
   height: 150px;
   object-fit: cover;
   border-radius: 8px;
-}
-
-.exercise-input {
-  border: 1px solid black;
-  border-radius: 12px;
-  height: 35px;
-  padding: 0 10px;
-  width: 72px;
 }
