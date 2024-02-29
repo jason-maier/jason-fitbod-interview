@@ -9,14 +9,14 @@ interface ExerciseCardProps {
 
 const ExerciseCard = ({ exercise }: ExerciseCardProps) => {
   return (
-    <div className="exerciseCard-container flex flex-row">
-      <div className="exerciseCard-main-content flex">
+    <div className="ExerciseCard-container flex flex-row">
+      <div className="ExerciseCard-main-content flex">
         <Image
           src={exercise.image}
           alt={exercise.name}
           width={60}
           height={60}
-          className="exerciseCard-image mr-6"
+          className="ExerciseCard-image mr-6"
         />
         <div className="flex flex-col justify-between">
           <h2 className="font-bold">{exercise.name}</h2>

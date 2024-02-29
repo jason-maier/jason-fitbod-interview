@@ -1,27 +1,27 @@
-.exerciseCard-container {
+.ExerciseCard-container {
   justify-content: flex-end;
   margin-bottom: 32px;
   width: 329px;
 }
 
 @media screen and (max-width: 800px) {
-  .exerciseCard-container {
+  .ExerciseCard-container {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (min-width: 800px) {
-  .exerciseCard-container:nth-child(odd) {
+  .ExerciseCard-container:nth-child(odd) {
     margin-right: 64px;
   }
 }
 
-.exerciseCard-image {
+.ExerciseCard-image {
   height: 60px;
   object-fit: cover;
 }
 
-.exerciseCard-main-content {
+.ExerciseCard-main-content {
   margin-right: auto;
 }

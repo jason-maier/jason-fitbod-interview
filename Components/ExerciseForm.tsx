@@ -1,13 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Set } from "@/app/types/types";
 import "./ExerciseForm.css";
-
-type Set = {
-  reps: number;
-  weight: number;
-  date: Date;
-};
+import { calculateBrzycki, groupSetsByDate } from "@/app/utils/utils";
 
 interface ExerciseFormProps {
   exerciseSlug: string;
@@ -21,10 +17,6 @@ const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
   const [sets, setSets] = useState(
     setsFromLocalStorage ? JSON.parse(setsFromLocalStorage) : []
   );
-
-  const calculateBrzycki = (weight: number, reps: number) => {
-    return Math.round(weight * (36 / (37 - reps)));
-  };
 
   useEffect(() => {
     if (sets.length) {
@@ -56,16 +48,7 @@ const ExerciseForm = ({ exerciseSlug }: ExerciseFormProps) => {
     setWeight(0);
   };
 
-  // group the sets by date property and make an object where each property is a date that has a value of an array of sets
-  const setsGroupedByDate = sets.reduce((acc: any, set: Set) => {
-    const date = new Date(set.date).toDateString();
-    if (acc[date]) {
-      acc[date].push(set);
-    } else {
-      acc[date] = [set];
-    }
-    return acc;
-  }, {});
+  const setsGroupedByDate = groupSetsByDate(sets);
 
   return (
     <div className="ExerciseForm-container">

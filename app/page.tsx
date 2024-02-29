@@ -27,7 +27,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
       <h1 className="mb-12 mt-8 text-2xl">Top Exercises</h1>
-      <div className="flex flex-row flex-wrap exerciseCard-section">
+      <div className="flex flex-row flex-wrap ExerciseCard-section">
         {exercises.length &&
           (exercises as ExerciseData[]).map((exercise) => (
             <ExerciseCard key={exercise.id} exercise={exercise} />

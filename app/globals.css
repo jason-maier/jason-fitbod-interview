@@ -24,7 +24,7 @@ body {
 }
 
 @media screen and (min-width: 800px) {
-  .exerciseCard-section {
+  .ExerciseCard-section {
     width: 722px;
   }
 }
