@@ -1,19 +1,7 @@
 import ExerciseCard from "@/Components/ExerciseCard";
 import { ExerciseData } from "./types/types";
+import { getExerciseData } from "./utils/utils";
 import "./globals.css";
-
-export const getExerciseData = async (): Promise<ExerciseData[]> => {
-  const res = await fetch(
-    "https://storage.googleapis.com/fitbod-web-internal/exercises.json"
-  );
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const data = await res.json();
-  return data;
-};
 
 export default async function Home() {
   const exercises: ExerciseData[] = await getExerciseData();

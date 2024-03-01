@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExerciseData } from "@/app/page";
+import { ExerciseData } from "@/app/types/types";
 import "./ExerciseCard.css";
 
 interface ExerciseCardProps {
