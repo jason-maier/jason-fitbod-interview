@@ -1,4 +1,4 @@
-import ExerciseCard from "@/Components/ExerciseCard";
+import ExerciseCard from "@/components/ExerciseCard";
 import { ExerciseData } from "./types/types";
 import { getExerciseData } from "./utils/utils";
 import "./globals.css";

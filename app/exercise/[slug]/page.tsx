@@ -1,6 +1,6 @@
 import { getExerciseData } from "@/app/utils/utils";
 import Image from "next/image";
-import ExerciseForm from "@/Components/ExerciseForm";
+import ExerciseForm from "@/components/ExerciseForm";
 import { ExerciseData } from "@/app/types/types";
 import "./Exercise.css";
 
