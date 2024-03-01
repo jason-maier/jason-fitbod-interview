@@ -6,7 +6,9 @@ export const calculateBrzycki = (weight: number, reps: number) => {
 
 export const groupSetsByDate = (sets: Set[]) => {
   return sets.reduce((acc: any, set: Set) => {
-    const date = new Date(set.date).toDateString();
+    const date = new Date(set.date).toLocaleDateString("en-US", {
+      timeZone: "UTC",
+    });
     if (acc[date]) {
       acc[date].push(set);
     } else {
