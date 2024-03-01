@@ -2,7 +2,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## About the Fitbod App
 
+![Workouts](./public/Workouts.png)
+
 The Fitbod App allows you to track your progress on your favorite exercises so you can know for sure that your effort is going to getting stronger and more efficient at your most important movements.
+
+![Exercise](./public/Exercise.png)
 
 ## Still to be Added
 
@@ -25,7 +29,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
